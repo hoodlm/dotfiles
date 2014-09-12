@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/hoodlm/documents/py/Rabbits'
+let g:netrw_dirhist_2='/home/hoodlm/.vim'
+let g:netrw_dirhist_3='/home/hoodlm/documents/569/Jacobi2'
+let g:netrw_dirhist_4='/etc/grub.d'
