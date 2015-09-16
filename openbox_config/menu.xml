@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Firefox">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  <separator />
+  <item label="Steam">
+    <action name="Execute"><execute>steam</execute></action>
+  </item>
+  <item label="Spotify">
+    <action name="Execute"><execute>spotify</execute></action>
+  </item>
+  <item label="Teamspeak">
+    <action name="Execute"><command>/usr/lib/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh</command></action>
+  </item>
+  <separator />
+  <item label="GIMP">
+    <action name="Execute"><execute>gimp</execute></action>
+  </item>
+  <item label="FL Studio">
+    <action name="Execute"><command>wine C:\\\\Program\ Files\ \(x86\)\\\\Image-Line\\\\FL\ Studio\ 12\\\\FL.exe</command></action>
+  </item>
+  <!-- This requires the presence of the 'menu' package to work -->
+  <separator />
+  <item label="ObConf">
+    <action name="Execute"><execute>obconf</execute></action>
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Restart">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>
