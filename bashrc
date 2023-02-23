@@ -51,3 +51,5 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 PATH=${PATH}:~/.local/bin
+
+export GOPATH="$HOME/.local/go"
