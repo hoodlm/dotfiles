@@ -52,4 +52,12 @@ fi
 
 PATH=${PATH}:~/.local/bin
 
+# Golang
 export GOPATH="$HOME/.local/go"
+
+# Python
+pyenv_root="$HOME/.pyenv"
+if [[ -d $pyenv_root ]]; then
+  PATH=${PATH}:${pyenv_root}/bin
+  eval "$(pyenv virtualenv-init -)"
+fi
