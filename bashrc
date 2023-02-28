@@ -61,3 +61,9 @@ if [[ -d $pyenv_root ]]; then
   PATH=${PATH}:${pyenv_root}/bin
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# sfeed
+sfeed_root="$HOME/.sfeed"
+if [[ -d $sfeed_root ]]; then
+  alias rss='SFEED_URL_FILE=${sfeed_root}/urls sfeed_curses ${sfeed_root}/feeds/*'
+fi
