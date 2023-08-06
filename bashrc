@@ -62,6 +62,13 @@ if [[ -d $pyenv_root ]]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# Ruby
+PATH=${PATH}:/usr/share/rvm/bin
+
+# Node
+export NPM_CONFIG_PREFIX=${HOME}/.npm/
+export PATH="${PATH}:${NPM_CONFIG_PREFIX}/bin"
+
 # sfeed
 sfeed_root="$HOME/.sfeed"
 if [[ -d $sfeed_root ]]; then
