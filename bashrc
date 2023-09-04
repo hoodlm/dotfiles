@@ -52,6 +52,9 @@ fi
 
 PATH=${PATH}:~/.local/bin
 
+# Git configuration
+git config --global core.editor "vim"
+
 # Golang
 export GOPATH="$HOME/.local/go"
 
