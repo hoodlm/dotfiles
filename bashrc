@@ -68,6 +68,9 @@ fi
 # Ruby
 PATH=${PATH}:/usr/share/rvm/bin
 
+# Kitty
+PATH=${PATH}:${HOME}/.local/kitty.app/bin
+
 # Node
 export NPM_CONFIG_PREFIX=${HOME}/.npm/
 export PATH="${PATH}:${NPM_CONFIG_PREFIX}/bin"
