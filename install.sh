@@ -13,3 +13,4 @@ dotfile_install() {
 dotfile_install "vimrc"  "$HOME/.vimrc"
 dotfile_install "bashrc" "$HOME/.bashrc"
 dotfile_install "tmux.conf" "$HOME/.tmux.conf"
+dotfile_install "kitty.conf" "$HOME/.config/kitty/kitty.conf"
