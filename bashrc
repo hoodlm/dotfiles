@@ -68,6 +68,10 @@ fi
 # Ruby
 PATH=${PATH}:/usr/share/rvm/bin
 
+# Rust
+PATH=${PATH}:${HOME}/.local/RustRover/bin
+PATH=${PATH}:${HOME}/.cargo/bin
+
 # Kitty
 PATH=${PATH}:${HOME}/.local/kitty.app/bin
 
