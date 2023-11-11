@@ -72,6 +72,9 @@ PATH=${PATH}:/usr/share/rvm/bin
 PATH=${PATH}:${HOME}/.local/RustRover/bin
 PATH=${PATH}:${HOME}/.cargo/bin
 
+# TeX
+PATH=${PATH}:${HOME}/.local/texlive/2023/bin/x86_64-linux
+
 # Kitty
 PATH=${PATH}:${HOME}/.local/kitty.app/bin
 
