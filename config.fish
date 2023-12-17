@@ -1,6 +1,7 @@
 if status is-interactive
     # Git config
     git config --global core.editor "vim"
+    git config --global init.defaultBranch "main"
 
     # Golang
     set GOPATH "$HOME/.local/go"
