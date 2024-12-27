@@ -20,3 +20,7 @@ if status is-interactive
 
     set -g fish_key_bindings setup-key-bindings
 end
+
+function conda-start
+    eval /home/logan/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+end
