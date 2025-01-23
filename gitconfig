@@ -1,0 +1,7 @@
+[core]
+	editor = nvim
+[user]
+	email = hoodlm@protonmail.com
+	name = Logan M Hood
+[init]
+	defaultBranch = main
