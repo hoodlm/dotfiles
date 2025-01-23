@@ -18,6 +18,10 @@ if status is-interactive
     # TeX
     fish_add_path "$HOME/.local/texlive/2023/bin/x86_64-linux"
 
+    # neovim
+    fish_add_path "$HOME/.local/nvim/nvim-linux64/bin"
+    set EDITOR "nvim"
+
     set -g fish_key_bindings setup-key-bindings
 end
 
