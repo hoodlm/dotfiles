@@ -52,7 +52,6 @@ require('pckr').add{
         'https://github.com/neovim/nvim-lspconfig',
         tag = 'v1.4.0',
     },
-
 }
 
 -- Plugin-specific setups
@@ -63,3 +62,11 @@ map('n', 'n', [[:NvimTreeToggle<CR>]], {})
 -- mason
 require('mason').setup()
 require('mason-lspconfig').setup()
+
+-- lsp servers
+local lspconfig = require('lspconfig')
+lspconfig.rust_analyzer.setup {
+    settings = {
+        ['rust-analyzer'] = {},
+    },
+}
