@@ -57,7 +57,7 @@ require('pckr').add{
 -- Plugin-specific setups
 -- nvim-tree
 require('nvim-tree').setup()
-map('n', 'n', [[:NvimTreeToggle<CR>]], {})
+map('n', '<Leader>n', [[:NvimTreeToggle<CR>]], {})
 
 -- mason
 require('mason').setup()
