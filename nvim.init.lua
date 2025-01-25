@@ -33,16 +33,33 @@ bootstrap_pckr()
 -- # PLUGINS
 require('pckr').add{
     {
-        'https://github.com/nvim-tree/nvim-tree.lua.git',
+        'https://github.com/nvim-tree/nvim-tree.lua',
         tag = 'v1.10.0',
     },
     {
-        'https://github.com/nvim-treesitter/nvim-treesitter.git',
+        'https://github.com/nvim-treesitter/nvim-treesitter',
         tag = 'v0.9.3',
-    }
+    },
+    {
+        'https://github.com/williamboman/mason.nvim',
+        tag = 'v1.10.0',
+    },
+    {
+        'https://github.com/williamboman/mason-lspconfig.nvim',
+        tag = 'v1.31.0',
+    },
+    {
+        'https://github.com/neovim/nvim-lspconfig',
+        tag = 'v1.4.0',
+    },
+
 }
 
 -- Plugin-specific setups
 -- nvim-tree
 require('nvim-tree').setup()
-map('n', 'n', [[:NvimTreeToggle]], {})
+map('n', 'n', [[:NvimTreeToggle<CR>]], {})
+
+-- mason
+require('mason').setup()
+require('mason-lspconfig').setup()
