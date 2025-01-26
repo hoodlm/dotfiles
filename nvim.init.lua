@@ -40,6 +40,8 @@ require('pckr').add{
         'https://github.com/nvim-treesitter/nvim-treesitter',
         tag = 'v0.9.3',
     },
+    -- Mason, lsp, and nvim-cmp are an IDE-like setup. Largely based on:
+    -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
     {
         'https://github.com/williamboman/mason.nvim',
         tag = 'v1.10.0',
@@ -51,6 +53,27 @@ require('pckr').add{
     {
         'https://github.com/neovim/nvim-lspconfig',
         tag = 'v1.4.0',
+    },
+    -- Autocomplete
+    {
+        'https://github.com/hrsh7th/nvim-cmp',
+        tag = "v0.0.2",
+    },
+    {
+        'https://github.com/hrsh7th/cmp-nvim-lsp',
+        commit = "99290b3ec1322070bcfb9e846450a46f6efa50f0",
+    },
+    {
+        'https://github.com/hrsh7th/cmp-path',
+        commit = "91ff86cd9c29299a64f968ebb45846c485725f23",
+    },
+    {
+        'https://github.com/hrsh7th/cmp-buffer',
+        commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa",
+    },
+    {
+        'https://github.com/hrsh7th/cmp-nvim-lsp-signature-help',
+        commit = "031e6ba70b0ad5eee49fd2120ff7a2e325b17fa7",
     },
 }
 
@@ -70,3 +93,29 @@ lspconfig.rust_analyzer.setup {
         ['rust-analyzer'] = {},
     },
 }
+
+-- autocomplete setup
+vim.opt.completeopt = {'menuone', 'noinsert'}
+local cmp = require('cmp')
+cmp.setup({
+    sources = {
+        { name = 'path' },
+        { name = 'nvim_lsp', keyword_length = 3 },
+    },
+    mapping = {
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Insert,
+            select = true,
+        })
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+})
